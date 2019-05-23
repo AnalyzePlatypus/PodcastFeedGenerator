@@ -26,7 +26,7 @@ gem 'podcast_feed_generator'
 
 `PodcastFeedGenerator` has exactly one public method: `generate`, which expects a Ruby hash with the following shape:
 
-```json
+```javascript
 {
   "podcast": {
     "title": "Podcast Title",
@@ -49,7 +49,7 @@ gem 'podcast_feed_generator'
     "summary": "Podcast summary",            // Defaults to value of `description`
     "explicit": "no",                        // Can be one of `yes` | `no` | `explicit`.  Defaults to "no"
     "language": "en-US",                     // Defaults to `en-US`
-    "podcastType": "Episodic", // `Episodic` or `Serial`. `Episodic` causes iTunes to list newest first; `Serial`, oldest first
+    "podcastType": "Episodic",               // `Episodic` or `Serial`. `Episodic` causes iTunes to list newest first; `Serial`, oldest first
     "copyright": "(c) Podcast Copyright Notice" // Empty by default
   },
   "episodes": [
@@ -64,25 +64,29 @@ gem 'podcast_feed_generator'
       "mediaFileSizeBytes": "34540230",
 
       // Optional
+      "creator": "Episode Creator",               // Defaults to the `author` field above
+      "subtitle": "Episode subtitle",             // Defaults to the episode `description`
+      "summary": "Episode summary",               // Defaults to the episode `description`
+      "explicit": "no",                           // Can be one of `yes` | `no` | `explicit`.  Defaults to "no"
+      "episodeArtUrl": "path/to/episodeImage",    // Defaults to the podcast artwork url
+      "itunesTitle": "Episode iTunes title",      // Special title to show in iTunes. Defaults to episode `title`
+      "episodeNumber": "42",                      // Automatically generated if not specified.
+      "seasonNumber": "2",                        // Empty by default
+      "episodeType": "Full",                      // Defaults to `Full`
+      "mediaMimeType": "audio/mpeg",              // Any media mime type. Defaults to "audio/mpeg"
+      "mediaIsDefault": "true",                   // Defaults to true
+      "medium": "audio"                           // `audio` | `video`
+      "htmlDescription": "<div></div>",           // Defaults to the episode `description`
       "guid": "my.site/episodes/hjhkhl7829hs986", // Defaults to a 32-bit random string
-      "guidIsPermalink": "false",   // `false` by default. Set to `true` if your `guid` is a permalink url
-      "creator": "Episode Creator", // Defaults to the `author` field above
-      "htmlDescription": "<div>Episode HTML description</div>", // Defaults to the episode `description`
-      "subtitle": "Episode subtitle", // Defaults to the episode `description`
-      "summary": "Episode summary",   // Defaults to the episode `description`
-      "explicit": "no",               // Can be one of `yes` | `no` | `explicit`.  Defaults to "no"
-      "episodeArtUrl": "path/to/episodeImage", // Defaults to the podcast artwork url
-      "itunesTitle": "Episode iTunes title",   // Special title to show in iTunes. Defaults to episode `title`
-      "episodeNumber": "42",                   // Automatically generated if not specified.
-      "seasonNumber": "2",                     // Empty by default
-      "episodeType": "Full",                   // Defaults to `Full`
-      "mediaMimeType": "audio/mpeg", // Any media mime type. Defaults to "audio/mpeg"
-      "mediaIsDefault": "true",      // Defaults to true
-      "medium": "audio"              // `audio` | `video`
+      "guidIsPermalink": "false",                 // `false` by default. Set to `true` if your `guid` is a permalink url
     }
   ]
 }
 ```
+
+## See Also
+
+* [Apple Podcast Feed Guidelines](https://help.apple.com/itc/podcasts_connect/#/itc2b3780e76)
 
 ## Contributing
 
