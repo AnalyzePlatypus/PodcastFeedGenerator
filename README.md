@@ -1,6 +1,7 @@
 # PodcastFeedGenerator
 
 [![Build Status](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator.svg?branch=master)](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator)
+[![Coverage Status](https://coveralls.io/repos/github/AnalyzePlatypus/PodcastFeedGenerator/badge.svg?branch=master)](https://coveralls.io/github/AnalyzePlatypus/PodcastFeedGenerator?branch=master)
 
 Easily generate industry-standard podcast RSS feeds.
 
