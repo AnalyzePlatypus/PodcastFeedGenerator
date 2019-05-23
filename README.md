@@ -72,7 +72,7 @@ gem 'podcast_feed_generator'
       "itunesTitle": "Episode iTunes title",      // Special title to show in iTunes. Defaults to episode `title`
       "episodeNumber": "42",                      // Automatically generated if not specified.
       "seasonNumber": "2",                        // Empty by default
-      "episodeType": "Full",                      // Defaults to `Full`
+      "episodeType": "Full",                      // `full` | `trailer` | `bonus`. Defaults to `Full`. See the documentation for <itunes:episodeType> on https://help.apple.com/itc/podcasts_connect/#/itcb54353390
       "mediaMimeType": "audio/mpeg",              // Any media mime type. Defaults to "audio/mpeg"
       "mediaIsDefault": "true",                   // Defaults to true
       "medium": "audio"                           // `audio` | `video`
