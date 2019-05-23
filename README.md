@@ -1,5 +1,7 @@
 # PodcastFeedGenerator
 
+[![Build Status](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator.svg?branch=master)](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator)
+
 Easily generate industry-standard podcast RSS feeds.
 
 ```ruby
