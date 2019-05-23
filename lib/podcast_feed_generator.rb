@@ -2,7 +2,6 @@ require "podcast_feed_generator/version"
 
 require 'time'
 require 'nokogiri'
-require 'awesome_print'
 
 # Constants
 
