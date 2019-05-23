@@ -4,3 +4,4 @@ source "https://rubygems.org"
 gemspec
 gem 'nokogiri'
 gem 'minitest-reporters'
+gem 'coveralls', require: false
