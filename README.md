@@ -75,14 +75,14 @@ gem 'podcast_feed_generator'
       "episodeArtUrl": "path/to/episodeImage",    // Defaults to the podcast artwork url
       "itunesTitle": "Episode iTunes title",      // Special title to show in iTunes. Defaults to episode `title`
       "episodeNumber": "42",                      // Automatically generated if not specified.
-      "seasonNumber": "2",                        // Empty by default
+      "seasonNumber": "2",                        // Defaults to ""
       "episodeType": "Full",                      // `full` | `trailer` | `bonus`. Defaults to `Full`. See the documentation for <itunes:episodeType> on https://help.apple.com/itc/podcasts_connect/#/itcb54353390
       "mediaMimeType": "audio/mpeg",              // Any media mime type. Defaults to "audio/mpeg"
       "mediaIsDefault": "true",                   // Defaults to true
-      "medium": "audio"                           // `audio` | `video`
+      "medium": "audio"                           // `audio` | `video`. Defaults to `audio`
       "htmlDescription": "<div></div>",           // Defaults to the episode `description`
       "guid": "my.site/episodes/hjhkhl7829hs986", // Defaults to a 32-bit random string
-      "guidIsPermalink": "false",                 // `false` by default. Set to `true` if your `guid` is a permalink url
+      "guidIsPermalink": "false",                 // Defaults to `false`. Set to `true` if your `guid` is a permalink url
     }
   ]
 }
