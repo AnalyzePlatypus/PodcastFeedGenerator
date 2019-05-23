@@ -86,7 +86,9 @@ gem 'podcast_feed_generator'
 
 ## See Also
 
-* [Apple Podcast Feed Guidelines](https://help.apple.com/itc/podcasts_connect/#/itc2b3780e76)
+* [Apple Podcasts Feed Guidelines](https://help.apple.com/itc/podcasts_connect/#/itc2b3780e76)
+* [Apple Podcasts RSS Explained](https://help.apple.com/itc/podcasts_connect/#/itcb54353390)
+* [Apple Podcasts Categories](https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12)
 
 ## Contributing
 
