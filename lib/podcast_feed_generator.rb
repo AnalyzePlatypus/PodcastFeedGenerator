@@ -143,7 +143,7 @@ module PodcastFeedGenerator
                   xml.pubDate episode["pubDate"]
                   xml.link episode["link"]
                   xml.guid("isPermalink": episode["guidIsPermalink"]){
-                    xml.text episode["guid"]
+                    xml.text episode["guid"] || (0...32).map { (65 + rand(26)).chr }.join
                   } 
 
                   xml.description episode["description"]

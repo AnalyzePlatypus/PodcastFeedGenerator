@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Michoel Samuels"]
   spec.email         = ["k2co3@icloud.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{🎙 Easily generate RSS podcast feeds from a simple JSON object.}
+  spec.description   = %q{🎙 Easily generate RSS podcast feeds from a simple JSON object (100% test coverage, compatible with every major podcast player)}
   spec.homepage      = "https://github.com/AnalyzePlatypus/PodcastFeedGenerator"
   spec.license       = "MIT"
 

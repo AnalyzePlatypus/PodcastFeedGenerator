@@ -1,34 +1,88 @@
 # PodcastFeedGenerator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/podcast_feed_generator`. To experiment with that code, run `bin/console` for an interactive prompt.
+Easily generate industry-standard podcast RSS feeds.
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+require "podcast_feed_generator"
+
+json = JSON.parse(File.open("feed.json").read) # A JSON file containing all of your podcast's info
+
+rss_feed = PodcastFeedGenerator::Generator.new.generate json
+```
 
 ## Installation
 
-Add this line to your application's Gemfile:
+```
+$ gem install podcast_feed_generator
+```
+
+Or add this line to your application's Gemfile:
 
 ```ruby
 gem 'podcast_feed_generator'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install podcast_feed_generator
-
 ## Usage
 
-TODO: Write usage instructions here
+`PodcastFeedGenerator` has exactly one public method: `generate`, which expects a Ruby hash with the following shape:
 
-## Development
+```json
+{
+  "podcast": {
+    "title": "Podcast Title",
+    "description": "Podcast Description",
+    "link": "link/to/show",
+    "author": "Podcast author",
+    "ownerName": "Podcast owner",
+    "ownerEmail": "podcast@email.io",
+    "podcastArtworkUrl": "link/to/feedImage",
+     "categories": [ // Add up to three of the official iTunes categories: https://castos.com/itunes-podcast-category-list/
+      "Category 1",
+      "Category 2",
+      "Category 3"
+    ],
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    // Optional
+    "lastBuildDate": "2019-06-23",           // Defaults to current date
+    "generator": "PodcastFeedGenerator gem", // Defaults to "PodcastFeedGenerator"
+    "subtitle": "Podcast subtitle",          // Defaults to value of `description`
+    "summary": "Podcast summary",            // Defaults to value of `description`
+    "explicit": "no",                        // Can be one of `yes` | `no` | `explicit`.  Defaults to "no"
+    "language": "en-US",                     // Defaults to `en-US`
+    "podcastType": "Episodic", // `Episodic` or `Serial`. `Episodic` causes iTunes to list newest first; `Serial`, oldest first
+    "copyright": "(c) Podcast Copyright Notice" // Empty by default
+  },
+  "episodes": [
+    {
+      "title": "Episode Title",
+      "author": "Episode Author",
+      "pubDate": "2019-05-01",
+      "link": "link/to/episode", 
+      "description": "Episode description",
+      "mediaFileUrl": "https://my-site.io/podcast/1",
+      "duration": "00:33:12",
+      "mediaFileSizeBytes": "34540230",
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+      // Optional
+      "guid": "my.site/episodes/hjhkhl7829hs986", // Defaults to a 32-bit random string
+      "guidIsPermalink": "false",   // `false` by default. Set to `true` if your `guid` is a permalink url
+      "creator": "Episode Creator", // Defaults to the `author` field above
+      "htmlDescription": "<div>Episode HTML description</div>", // Defaults to the episode `description`
+      "subtitle": "Episode subtitle", // Defaults to the episode `description`
+      "summary": "Episode summary",   // Defaults to the episode `description`
+      "explicit": "no",               // Can be one of `yes` | `no` | `explicit`.  Defaults to "no"
+      "episodeArtUrl": "path/to/episodeImage", // Defaults to the podcast artwork url
+      "itunesTitle": "Episode iTunes title",   // Special title to show in iTunes. Defaults to episode `title`
+      "episodeNumber": "42",                   // Automatically generated if not specified.
+      "seasonNumber": "2",                     // Empty by default
+      "episodeType": "Full",                   // Defaults to `Full`
+      "mediaMimeType": "audio/mpeg", // Any media mime type. Defaults to "audio/mpeg"
+      "mediaIsDefault": "true",      // Defaults to true
+      "medium": "audio"              // `audio` | `video`
+    }
+  ]
+}
+```
 
 ## Contributing
 
