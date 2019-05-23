@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator.svg?branch=master)](https://travis-ci.org/AnalyzePlatypus/PodcastFeedGenerator)
 [![Coverage Status](https://coveralls.io/repos/github/AnalyzePlatypus/PodcastFeedGenerator/badge.svg?branch=master)](https://coveralls.io/github/AnalyzePlatypus/PodcastFeedGenerator?branch=master)
+[![mit license](https://img.shields.io/badge/license-MIT-blue.svg)](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Easily generate industry-standard podcast RSS feeds.
 
