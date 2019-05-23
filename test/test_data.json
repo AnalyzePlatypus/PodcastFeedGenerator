@@ -1,0 +1,51 @@
+{
+  "podcast": {
+    "title": "Podcast Title",
+    "description": "Podcast Description",
+    "link": "link/to/show",
+    "lastBuildDate": "2019-06-23",
+    "generator": "PodcastFeedGenerator gem",
+    "author": "Podcast author",
+    "subtitle": "Podcast subtitle",
+    "summary": "Podcast description",
+    "explicit": "no",
+    "language": "en-US",
+    "ownerName": "Podcast owner",
+    "ownerEmail": "podcast@email.io",
+    "categories": [
+      "Category 1",
+      "Category 2",
+      "Category 3"
+    ],
+    "podcastType": "Episodic",
+    "podcastArtworkUrl": "link/to/feedImage",
+    "copyright": "(c) Podcast Copyright Notice"
+  },
+  "episodes": [
+    {
+      "title": "Episode Title",
+      "guid": "my.site/episodes/hjhkhl7829hs986",
+      "guidIsPermalink": "true",
+      "creator": "Episode Creator",
+      "pubDate": "2019-05-01",
+      "link": "link/to/episode",
+      "description": "Episode description",
+      "htmlDescription": "<div>Episode HTML description</div>",
+      "author": "Episode Author",
+      "subtitle": "Episode subtitle",
+      "summary": "Episode summary",
+      "explicit": "no",
+      "duration": "00:33:12",
+      "episodeArtUrl": "path/to/episodeImage",
+      "itunesTitle": "Episode iTunes title",
+      "episodeNumber": "42",
+      "seasonNumber": "2",
+      "episodeType": "Full",
+      "mediaFileUrl": "https://my-site.io/podcast/1",
+      "mediaMimeType": "audio/mpeg",
+      "mediaFileSizeBytes": "34540230",
+      "mediaIsDefault": "true",
+      "medium": "audio"
+    }
+  ]
+}

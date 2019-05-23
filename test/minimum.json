@@ -1,0 +1,46 @@
+{
+  "podcast": {
+    "title": "Podcast Title",
+    "description": "Podcast Description",
+    "link": "link/to/show",
+    "author": "Podcast author",
+    "ownerName": "Podcast owner",
+    "ownerEmail": "podcast@email.io",
+    "categories": [
+      "Category 1"
+    ],
+    "podcastArtworkUrl": "link/to/feedImage"
+  },
+  "episodes": [
+    {
+      "title": "Episode 3",
+      "guid": "7891hs",
+      "description": "Episode description",
+      "pubDate": "2019-05-01",
+      "link": "link/to/episode",
+      "duration": "00:33:12",
+      "mediaFileUrl": "https://my-site.io/podcast/3",
+      "mediaFileSizeBytes": "34540230"
+    },
+    {
+      "title": "Episode 2",
+      "guid": "8sn1j",
+      "description": "Episode description",
+      "pubDate": "2019-05-01",
+      "link": "link/to/episode",
+      "duration": "00:33:12",
+      "mediaFileUrl": "https://my-site.io/podcast/2",
+      "mediaFileSizeBytes": "34540230"
+    },
+    {
+      "title": "Episode 1",
+      "guid": "9snl",
+      "description": "Episode description",
+      "pubDate": "2019-05-01",
+      "link": "link/to/episode",
+      "duration": "00:33:12",
+      "mediaFileUrl": "https://my-site.io/podcast/1",
+      "mediaFileSizeBytes": "34540230"
+    }
+  ]
+}
