@@ -285,6 +285,10 @@ describe PodcastFeedGenerator::Generator do
         assert_equal @mininum_json["episodes"][0]["description"], @minimal_rss.css("rss>channel>item:first-of-type>itunes|summary").text
       end
 
+      it "should set the author to the feed author` by default" do
+        assert_equal @mininum_json["podcast"]["author"], @minimal_rss.css("rss>channel>item:first-of-type>author").text
+      end
+
       it "should set `explicit` to the 'no' by default" do
         assert_equal "no", @minimal_rss.css("rss>channel>item:first-of-type>itunes|explicit").text
       end

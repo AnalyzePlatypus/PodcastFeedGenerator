@@ -106,7 +106,7 @@ module PodcastFeedGenerator
               xml.language      channel_details["language`"]     || "en-US"
               xml.copyright     channel_details["copyright"]
 
-              xml['itunes'].author   channel_details["author"]
+              xml['itunes'].author   channel_details["author"]      || channel_details["author"]
               xml['itunes'].subtitle channel_details["subtitle"]    || channel_details["description"]
               xml['itunes'].summary  channel_details["summary"]     || channel_details["description"]
               xml['itunes'].explicit channel_details["explicit"]    || "no"

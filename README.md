@@ -58,7 +58,6 @@ gem 'podcast_feed_generator'
   "episodes": [
     {
       "title": "Episode Title",
-      "author": "Episode Author",
       "pubDate": "2019-05-01",
       "link": "link/to/episode", 
       "description": "Episode description",
@@ -67,6 +66,7 @@ gem 'podcast_feed_generator'
       "mediaFileSizeBytes": "34540230",
 
       // Optional
+      "author": "Episode Author",                 // Defaults to the `author` field above
       "creator": "Episode Creator",               // Defaults to the `author` field above
       "subtitle": "Episode subtitle",             // Defaults to the episode `description`
       "summary": "Episode summary",               // Defaults to the episode `description`
@@ -80,7 +80,7 @@ gem 'podcast_feed_generator'
       "mediaIsDefault": "true",                   // Defaults to true
       "medium": "audio"                           // `audio` | `video`
       "htmlDescription": "<div></div>",           // Defaults to the episode `description`
-      "guid": "my.site/episodes/hjhkhl7829hs986", // Defaults to a 32-bit random string
+      "guid": "my.site/episodes/hjhkhl7829hs986", // Defaults to a 32-character random string. Can alternatvely be a URL.
       "guidIsPermalink": "false",                 // `false` by default. Set to `true` if your `guid` is a permalink url
     }
   ]
