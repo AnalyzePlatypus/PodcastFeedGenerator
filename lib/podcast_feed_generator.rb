@@ -147,7 +147,7 @@ module PodcastFeedGenerator
 
                   xml.description episode["description"]
                   xml["content"].encoded {
-                    xml.text "<![CDATA[#{episode["htmlDescription"]}]]>"
+                    xml.text "<![CDATA[#{episode["htmlDescription"]} ]]>"
                   }
                   xml['itunes'].author episode["author"]
                   xml['itunes'].subtitle episode["subtitle"] || episode["description"]
