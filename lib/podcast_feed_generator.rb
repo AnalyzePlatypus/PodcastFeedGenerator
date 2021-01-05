@@ -103,7 +103,7 @@ module PodcastFeedGenerator
               xml.link          channel_details["link"]
               xml.lastBuildDate channel_details["lastBuildDate"] || Time.now.rfc2822
               xml.generator     channel_details["generator"]     || DEFAULT_GENERATOR_STRING
-              xml.language      channel_details["language`"]     || "en-US"
+              xml.language      channel_details["language"]     || "en-US"
               xml.copyright     channel_details["copyright"]
 
               xml['itunes'].author   channel_details["author"]
