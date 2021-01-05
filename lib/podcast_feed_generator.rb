@@ -141,6 +141,7 @@ module PodcastFeedGenerator
                 xml.item {
                   xml.title episode["title"]
                   xml['dc'].creator episode["creator"] || channel_details["author"]
+                  xml.author episode["creator"] || channel_details["author"]
                   xml.pubDate episode["pubDate"]
                   xml.link episode["link"]
                   xml.guid("isPermalink": episode["guidIsPermalink"]){

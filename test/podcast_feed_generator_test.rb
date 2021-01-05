@@ -256,7 +256,6 @@ describe PodcastFeedGenerator::Generator do
     end
 
 
-
     describe "optional fields default values" do
       before do 
         @mininum_json = read_json_file MINIMAL_DATA_PATH
