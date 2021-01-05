@@ -16,7 +16,7 @@ rss_feed = PodcastFeedGenerator::Generator.new.generate json
 
 ## Installation
 
-```
+```shell
 $ gem install podcast_feed_generator
 ```
 
@@ -24,6 +24,14 @@ Or add this line to your application's Gemfile:
 
 ```ruby
 gem 'podcast_feed_generator'
+```
+
+## Build
+
+```shell
+$ cd PodcastFeedGenerator/
+$ gem build podcast_feed_generator.gemspec
+$ gem install podcast_feed_generator
 ```
 
 ## Usage
