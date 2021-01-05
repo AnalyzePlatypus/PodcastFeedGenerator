@@ -1,5 +1,7 @@
 require "podcast_feed_generator/version"
 
+require 'json'
+require 'uri'
 require 'time'
 require 'nokogiri'
 
