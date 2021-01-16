@@ -26,7 +26,7 @@ def url_valid? url
 end
 
 def detect_duplicate_guids episodes  
-  episode_guids = episodes.map{|e| e["guid"]}
+  episode_guids = episodes.filter_map{|e| e["guid"] if e}
   length_before_uniq = episode_guids.length
   length_after_uniq = episode_guids.uniq.length
 
