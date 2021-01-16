@@ -104,7 +104,7 @@ $ gem install podcast_feed_generator
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/podcast_feed_generator.
+Bug reports and pull requests are welcome on GitHub at https://github.com/AnalyzePlatypus/podcast_feed_generator.
 
 ## License
 
